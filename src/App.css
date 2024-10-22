@@ -1,0 +1,443 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* App css */
+/*      <<<<<<<<<<< MOBILE DEVICE >>>>>>>>        */
+.bg-App-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.content-container {
+  min-height: 100vh;
+  background-color: #131213;
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.create-a-task-container {
+  min-height: 70vh;
+  width: 100%;
+  background-color: #131213;
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.create-task-heading {
+  font-size: 30px;
+  font-family: 'roboto';
+  color: #f3aa4e;
+  font-weight: 500;
+  text-align: center;
+}
+/* From */
+.form-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.create-task-input-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+.label-text {
+  font-size: 16px;
+  color: #f8f8f8;
+  font-family: 'roboto';
+  font-weight: 505;
+  margin-bottom: 10px;
+}
+.input-element {
+  width: 100%;
+  height: 40px;
+  border-radius: 2px;
+  border: none;
+  background-color: #f8f8f8;
+  padding-left: 12px;
+  outline: none;
+
+  font-size: 16px;
+  color: #64748b;
+  font-family: 'roboto';
+}
+.create-tag-select-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 35px;
+}
+.select-element {
+  width: 100%;
+  height: 40px;
+  border-radius: 2px;
+  border: none;
+  background-color: #f8f8f8;
+  padding-left: 12px;
+  outline: none;
+
+  font-size: 16px;
+  color: #323f4b;
+  font-weight: 505;
+  font-family: 'roboto';
+}
+.add-task-button {
+  height: 45px;
+  width: 130px;
+  background-color: #f3aa4e;
+  border: none;
+  border-radius: 8px;
+  color: #f8f8f8;
+  font-size: 16px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+}
+/*  Added Task Content */
+.added-task-container {
+  background-color: #000000;
+  min-height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-y: auto;
+  padding: 10px;
+  padding-top: 40px;
+  padding-left: 20px;
+}
+.tags-heading {
+  font-size: 25px;
+  font-family: 'roboto';
+  color: #f8fafc;
+  font-weight: 500;
+}
+.tags-list-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+.tag-item-container {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  margin-right: 15px;
+  margin-bottom: 12px;
+}
+/* tag-button  */
+.tag-item-button {
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid #f3aa4e;
+  border-radius: 20px;
+  font-size: 12px;
+  font-family: 'roboto';
+  color: #f8fafc;
+  font-weight: 500;
+  padding-left: 25px;
+  padding-right: 25px;
+  outline: none;
+  cursor: pointer;
+}
+.tag-item-active-button {
+  height: 30px;
+  background-color: #f3aa4e;
+  border: 1px solid #f3aa4e;
+  border-radius: 20px;
+  font-size: 12px;
+  font-family: 'roboto';
+  color: #f8fafc;
+  font-weight: 500;
+  padding-left: 25px;
+  padding-right: 25px;
+  outline: none;
+  cursor: pointer;
+}
+
+/*  added-list  */
+.added-task-list-container {
+  width: 96%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+/*  No Task Container  */
+.no-tasks-container {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.no-task-message {
+  font-size: 25px;
+  color: #f1f5f9;
+  font-family: 'roboto';
+  font-weight: bold;
+}
+
+/*    <<<<<<<<<<< LONG DEVICE >>>>>>>>        */
+
+@media screen and (min-width: 768px) {
+  /* App css */
+  .bg-App-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .content-container {
+    min-height: 100vh;
+    background-color: #131213;
+
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .create-a-task-container {
+    min-height: 100vh;
+    width: 35%;
+    background-color: #131213;
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .create-task-heading {
+    font-size: 40px;
+    font-family: 'roboto';
+    color: #f3aa4e;
+    font-weight: 500;
+    text-align: center;
+  }
+  /* From */
+  .form-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .create-task-input-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+  .label-text {
+    font-size: 20px;
+    color: #f8f8f8;
+    font-family: 'roboto';
+    font-weight: 505;
+    margin-bottom: 10px;
+  }
+  .input-element {
+    width: 100%;
+    height: 45px;
+    border-radius: 2px;
+    border: none;
+    background-color: #f8f8f8;
+    padding-left: 15px;
+    outline: none;
+
+    font-size: 18px;
+    color: #64748b;
+    font-family: 'roboto';
+  }
+  .create-tag-select-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 35px;
+  }
+  .select-element {
+    width: 100%;
+    height: 45px;
+    border-radius: 2px;
+    border: none;
+    background-color: #f8f8f8;
+    padding-left: 15px;
+    outline: none;
+
+    font-size: 18px;
+    color: #323f4b;
+    font-weight: 505;
+    font-family: 'roboto';
+  }
+  .add-task-button {
+    height: 50px;
+    width: 150px;
+    background-color: #f3aa4e;
+    border: none;
+    border-radius: 8px;
+    color: #f8f8f8;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+  }
+  /*  Added Task Content */
+  .added-task-container {
+    background-color: #000000;
+    min-height: 100vh;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-y: auto;
+    padding: 10px;
+    padding-top: 40px;
+    padding-left: 20px;
+  }
+  .tags-heading {
+    font-size: 28px;
+    font-family: 'roboto';
+    color: #f8fafc;
+    font-weight: 500;
+  }
+  .tags-list-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+  }
+  .tag-item-container {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    margin-right: 20px;
+    margin-bottom: 15px;
+  }
+  /* tag-button  */
+  .tag-item-button {
+    height: 36px;
+    background-color: transparent;
+    border: 1px solid #f3aa4e;
+    border-radius: 20px;
+    font-size: 16px;
+    font-family: 'roboto';
+    color: #f8fafc;
+    font-weight: 500;
+    padding-left: 30px;
+    padding-right: 30px;
+    outline: none;
+    cursor: pointer;
+  }
+  .tag-item-active-button {
+    height: 36px;
+    background-color: #f3aa4e;
+    border: 1px solid #f3aa4e;
+    border-radius: 20px;
+    font-size: 16px;
+    font-family: 'roboto';
+    color: #f8fafc;
+    font-weight: 500;
+    padding-left: 30px;
+    padding-right: 30px;
+    outline: none;
+    cursor: pointer;
+  }
+
+  /*  added-list  */
+  .added-task-list-container {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  /*  No Task Container  */
+  .no-tasks-container {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .no-task-message {
+    font-size: 30px;
+    color: #f1f5f9;
+    font-family: 'roboto';
+    font-weight: bold;
+  }
+}
